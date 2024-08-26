@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON buzzveldb.* TO 'identifierroot'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
