@@ -21,7 +21,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./PHP/Dockerfile
+      dockerfile: ./php/Dockerfile
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
