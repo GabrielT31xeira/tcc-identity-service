@@ -1,2 +1,2 @@
-GRANT ALL PRIVILEGES ON buzzveldb.* TO 'identifierroot'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON identifierdb.* TO 'identifierroot'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
