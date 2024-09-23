@@ -37,7 +37,10 @@ class AuthController extends Controller
                 $user = Auth::user();
                 # Gerando e retornando o token para o usuarios
                 $token = $user->createToken('identifierAPI')->accessToken;
-                return response()->json(['token' => $token], 200);
+                return response()->json([
+                    'user_id' => $user->id,
+                    'token' => $token
+                ], 200);
             } else {
                 # Caso os dados não sejam encontrados retorna não autorizado
                 return response()->json(['error' => 'Error in credentials'], 401);
