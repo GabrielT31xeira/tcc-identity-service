@@ -142,7 +142,7 @@ class AuthController extends Controller
     public function getUser($user_id)
     {
         try {
-            $user = User::find('id', $user_id);
+            $user = User::where('id', '=', $user_id)->first();
             return response()->json([
                 'user' => $user
             ],200);
