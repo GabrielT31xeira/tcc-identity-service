@@ -8,6 +8,7 @@ Route::post('register', [AuthController::class, 'register']);
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('logout', [AuthController::class, 'logout']);
     Route::get('profile', [AuthController::class, 'profile']);
+    Route::get('user/{user_id}', [AuthController::class, 'getUser']);
     Route::get('verify-token', [\App\Http\Controllers\api\TokenVerifyController::class, 'normalToken']);
     Route::get('verify-token-admin', [\App\Http\Controllers\api\TokenVerifyController::class, 'adminToken']);
 });
